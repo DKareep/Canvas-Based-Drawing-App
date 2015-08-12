@@ -1,0 +1,513 @@
+/* css for feedback page 
+ *Copyright 2014 Licensed Ovoid  */
+/* Accordion */
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,500,600,700);
+#cssmenu,
+#cssmenu ul,
+#cssmenu li,
+#cssmenu a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  position: relative;
+}
+#cssmenu a {
+  line-height: 1.3;
+}
+#cssmenu {
+  width: 250px;
+  height: 100%;
+  background-color: #f1f1f1;
+
+}
+#cssmenu > ul > li > a {
+  padding-right: 40px;
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  background: #808080;
+  color: #ffffff;
+  border-bottom: 2px solid #B6B6B6;
+  text-transform: capitalize;
+  position: relative;
+}
+#cssmenu > ul > li > a > span {
+  background-color: #636363;
+  padding: 10px;
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+#cssmenu > ul > li > a:hover {
+  text-decoration: none;
+}
+#cssmenu > ul > li.active {
+  border-bottom: none;
+}
+#cssmenu > ul > li.active > a {
+  color: #fff;
+}
+#cssmenu > ul > li.active > a span {
+  background-color: #808080;
+}
+#cssmenu span.cnt {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+#cssmenu ul ul {
+  display: none;
+}
+#cssmenu ul ul li {
+  border: 1px solid #e0e0e0;
+  border-top: 0;
+}
+#cssmenu ul ul a {
+  padding: 10px;
+  display: block;
+  color: #ed1144;
+  font-size: 13px;
+}
+#cssmenu ul ul a:hover {
+  color: #bd0e36;
+}
+#cssmenu ul ul li.odd {
+  background: #f4f4f4;
+}
+#cssmenu ul ul li.even {
+  position: relative;
+  background: #F1F1F1;
+  padding: 12px;
+  padding-left: 46px;
+}
+
+/* Accordion */
+body{
+  margin: 0px;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+html{
+  height: 100%;
+}
+#header{
+	width: 100%;
+	height: 45px;
+	background-color: #474747;
+}
+#container{
+  height:  100%;
+}
+.left-container{
+  position: relative;
+  width: 270px;
+  float: left;
+  height: 100%;
+}
+.left-container-hide{
+  position: relative;
+  width: 270px;
+  margin-left: -250px;
+}
+.img-name{
+  padding-top: 5px;
+  padding-bottom: 1px;
+  height: auto;
+  width: 150px;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-align: center;
+
+}
+.right-container{
+  float: left;
+  height: 0px;
+}
+.arrow-to-left{
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  right: 1px;
+  top: 47px;
+  cursor: pointer;
+  background: url("file:///C:/Users/Altair/Desktop/pure%20css/bootstrap-3.1.1-dist/images/editor-sprite-v2.png") no-repeat -600px -65px;
+}
+.thumb{
+  border: 4px solid #C2C2C2;
+}
+.arrow-to-right{
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  right: 1px;
+  top: 47px;
+  cursor: pointer;
+  background: url("file:///C:/Users/Altair/Desktop/pure%20css/bootstrap-3.1.1-dist/images/editor-sprite-v2.png") no-repeat -600px -45px;
+}
+.active-thumb{
+  border: 4px solid #80C2FF;
+}
+.mid-container{
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+.mode-switch{
+  position: fixed;
+  width: 330px;
+  background-color: #2e2e2e;
+  bottom: 10px;
+  padding: 10px;
+  left: 50%;
+  margin-left: -166px;
+  box-shadow: #8B8B8B 0px 0px 12px 1px;
+  border-radius: 4px;
+
+}
+.mode{
+  position: relative;
+  float: left;
+  padding: 5px;
+  color: #c7c7c7;
+  font-family: "museo-1","museo-2","Lucida Grande","Lucida Sans Unicode",sans-serif;
+  border-right: thin solid #969696;
+  padding: 0px 10px 0px 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.mode:hover{
+  color: #e8e8e8;
+  color: #fbfbfb;
+  text-shadow: black 1px 1px 6px;
+}
+.arrow-up {
+  position: absolute;
+  display: none;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #2e2e2e;
+  top: -15px;
+  left: 30px;
+}
+.approve-button{
+  float: right;
+  margin-right: 20px;
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-transform: capitalize;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  
+}
+.approve-button:hover{
+  background-color:#449d44;
+}
+.approve-button:active{
+  background-color: #5cb85c;
+}
+button:focus{
+ outline: none;
+}
+.share-button{
+  float: right;
+  margin-right: 20px;
+  width: 100px;
+  height: 30px;
+  color: #2d9cf9;
+  background-color: #474747;
+  border: thin solid #2d9cf9;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border-radius: 4px;
+  text-transform: capitalize;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  
+}
+.share-button:hover{
+  background-color:#2d9cf9;
+  color: #fbfbfb;
+}
+.share-button:active{
+  background-color: #8BCAFF;
+}
+.right-header{
+  float: right;
+  height: 45px;
+  padding: 7.5px;
+  font-family: "museo-1","museo-2","Lucida Grande","Lucida Sans Unicode",sans-serif !important;
+}
+.disabled{
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: .66;
+}
+.icon-ok{
+  margin-right: 3px;
+}
+
+/* comment-container  */
+.comment-container{
+  position: absolute;
+  left: 428px;
+  top: 291px;
+  width: 420px;
+  height: auto;
+  border-radius: 4px;
+  background-color: #fcfdfd;
+  -moz-box-shadow: 0px 0px 14px 6px rgba(141, 141, 141, 0.34), 0 1px 8px rgba(172, 172, 172, 1);
+-webkit-box-shadow: 0px 0px 14px 6px rgba(141, 141, 141, 0.34), 0 1px 8px rgba(172, 172, 172, 1);
+box-shadow: 0px 0px 14px 6px rgba(141, 141, 141, 0.34), 0 1px 8px rgba(172, 172, 172, 1);
+
+  
+}
+.comment-content{
+  padding: 11px;
+  padding-right: 19px;
+  padding-left: 17px;
+  position: relative;
+}
+.comment-arrow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 28px 0 0 -7px;
+  content: "";
+  width: 8px;
+  height: 16px;
+  background: url("file:///C:/Users/Altair/Desktop/pure%20css/bootstrap-3.1.1-dist/images/console-sprites.png");
+  background-position: -158px -1079px;
+
+}
+.comment-header{
+  position: relative;
+
+}
+.comment-heading{
+  float: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #69768e;
+  padding: 2px;
+}
+#myDropdown {
+  float: right;
+  margin-right: 40px;
+}
+#myDropdown label{
+  color: #6AB4E6;
+  font-size: 13px;
+}
+.dd-pointer-down {
+  border-top-color: rgb(163, 163, 163);
+}
+.clear{
+  clear: both;
+}
+.dd-selected-text{
+  text-transform: uppercase;
+}
+.comment-close{
+  cursor: pointer;
+  width: 11px;
+  height: 11px;
+  margin-top: 8px;
+  float: right;
+  background-image: url('file:///C:/Users/Altair/Desktop/pure%20css/bootstrap-3.1.1-dist/images/console-sprites.png');
+  background-position: -90px -826px;
+}
+.comment-text:focus{
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 8px #9ecaed;
+} 
+.comment-text{
+  border: 1px solid #d7dbdf;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  border-radius: 3px;
+  background: none;
+  max-width: 384px;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  height: 40px;
+  padding: 9px 18px 8px 10px;
+  outline: none;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+
+
+}
+.comment-footer{
+  padding: 10px 0 0 0;
+}
+.post-button{
+  float: left;
+  margin-right: 20px;
+  width: 154px;
+  padding: 10px;
+  height: 42px;
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  /* text-transform: capitalize; */
+  font-family: "museo-1","museo-2","Lucida Grande","Lucida Sans Unicode",sans-serif !important;
+  
+}
+.post-button:hover{
+  background-color:#449d44;
+}
+.post-button:active{
+  background-color: #5cb85c;
+}
+button:focus{
+ outline: none;
+}
+.commented-box{
+  margin-top: 15px;
+
+}
+.cmt-avatar-pic{
+  float: left;
+  width: 50px;
+  height: 50px;
+
+}
+.cmt-avatar-pic img{
+  border-radius: 50%;
+}
+.cmt-details{
+  float: left;
+  margin-left: 15px;
+  position: relative;
+
+}
+.cmt-delete-edit{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+}
+#delete-comment{
+  display: none;
+  opacity: 0.35;
+
+}
+#edit-comment{
+  margin-right: 10px;
+  display: none;
+  opacity: 0.35;
+}
+#delete-comment:hover, #edit-comment:hover{
+  opacity: 0.85;
+}
+.cmt-avatar-name{
+  color: #3c4659;
+  font-size: 14px;
+  font-weight: 700;
+}
+.commented-box{
+  overflow: hidden;
+}
+.cmt-text{
+  margin-top: 4px;
+  clear: both;
+  font-size: 13px;
+  line-height: 22px;
+  color: #5a6478;
+  font-weight: 400;
+  width: 315px;
+  word-wrap: break-word;
+  text-align: justify;
+}
+.img-attach{
+  text-align: right;
+  font-size: 13px;
+  color: #AFAFAF;
+}
+.attach-container{
+  width: 95px;
+  cursor: pointer;
+  float: right;
+}
+.attach-container:hover{
+  color: #444444;
+}

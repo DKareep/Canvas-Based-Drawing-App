@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DKareep Ovoid Proto</title>
+     
+     
+    <script type="text/javascript" src="js/shapes.js"></script>
+  </head>
+  <body onload="init()">
+    <div id="container">
+
+        <button class="rectangle" style="background-color: green" onclick="rectangle()">Rectangle</button>
+        <button class="circle" style="background-color: blue" onclick="circle()">Circle</button>
+        <button class="freehand" style="background-color: yellow" onclick="freehand()">Freehand</button>
+
+        <button class="Delete" style="background-color: yellow" onclick="deleteShape()">Delete Shape</button>
+
+     <section style="position: relative">
+      <canvas id="canvas1" href="" width="800" height="600" style="position:absolute;border: 1px solid black;">
+        This text is displayed if your browser does not support HTML5 Canvas.
+      </canvas>
+     </section>
+    </div>
+
+  </body>
+</html>
